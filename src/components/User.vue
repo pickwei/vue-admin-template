@@ -15,7 +15,7 @@
                                 <Input v-model="keyword" placeholder=" 订单号/油卡号/手机号" style="width: 200px" size='large'></Input>
                                 <Button type="primary" icon="ios-search" @click='search' size='large'>搜索</Button>
                             </div>
-                            <Tabl
+                            <Table :columns="columns" :data="list"></Table>
                         </div>
                         <!-- /.box-body -->
                     </div>
@@ -31,10 +31,13 @@
     export default {
         data () {
             return {
+                keyword:'',
+                list:[]
             }
         },
         props:['loading'],
         methods: {
+            search(){},
             handleSubmit (name) {
                 this.$refs[name].validate((valid) => {
                     if (valid) {

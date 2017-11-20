@@ -59,11 +59,8 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <router-link to="/home/userManage"  tag="li">
+                            <router-link to="/home/user"  tag="li">
                                 <a href="javascript:void(0)"><i class="fa fa-user-circle"></i>用户资料</a>
-                            </router-link>
-                            <router-link to="/home/addUser"  tag="li">
-                                <a href="javascript:void(0)"><i class="fa fa-user-circle"></i>新增用户</a>
                             </router-link>
                         </ul>
                     </li>

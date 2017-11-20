@@ -7,7 +7,7 @@ import iview from 'iview'
 
 import axios from 'axios'
 import qs from 'qs'
-// import md5 from 'js-md5'
+import md5 from 'js-md5'
 
 import 'iview/dist/styles/iview.css'
 import './assets/js/adminlte.js'
