@@ -20,7 +20,6 @@ export default new Router({
                 //     name: '登录页面',
                 //     component: user
                 // }]
-
         },
         {
             path: '/login',

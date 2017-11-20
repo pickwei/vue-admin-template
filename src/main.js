@@ -7,10 +7,9 @@ import iview from 'iview'
 
 import axios from 'axios'
 import qs from 'qs'
-import md5 from 'js-md5'
+// import md5 from 'js-md5'
 
-
-import '!style-loader!css-loader!iview/dist/styles/iview.css';
+import 'iview/dist/styles/iview.css'
 import './assets/js/adminlte.js'
 import './assets/js/bootstrap.min.js'
 import './assets/js/app.min.js'
@@ -23,7 +22,6 @@ import '!style-loader!css-loader!./assets/css/font-awesome.min.css'
 
 Vue.config.productionTip = false
 
-
 Vue.prototype.$http = axios
 axios.defaults.timeout = 9000; //响应时间
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'; //配置请求头
@@ -33,12 +31,12 @@ axios.defaults.headers.get['Content-Type'] = 'application/x-www-form-urlencoded;
 //POST传参序列化
 axios.interceptors.request.use((config) => {
     if (config.method === 'post') {
-        config.data = qs.stringify(config.data);
+        config.data = qs.stringify(config.data)
     }
-    return config;
+    return config
 }, (error) => {
-    return Promise.reject(error);
-});
+    return Promise.reject(error)
+})
 
 Vue.use(router)
 Vue.use(iview)
