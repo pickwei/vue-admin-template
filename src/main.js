@@ -30,7 +30,7 @@ axios.defaults.headers.get['Content-Type'] = 'application/x-www-form-urlencoded;
 
 //POST传参序列化
 axios.interceptors.request.use((config) => {
-    if (config.method === 'post') {
+    if (config.method === 'post' || config.method === 'get') {
         config.data = qs.stringify(config.data)
     }
     return config

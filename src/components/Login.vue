@@ -9,14 +9,14 @@
                 <div class="form-con">
                     <Form ref="loginForm" :model="loginData" :rules="ruleValidate">
                         <FormItem prop="userName">
-                            <Input v-model="loginData.userName">
+                            <Input v-model="loginData.loginId">
                                 <span slot="prepend">
                                     <Icon :size="16" type="person"></Icon>
                                 </span>
                             </Input>
                         </FormItem>
                         <FormItem prop="password">
-                            <Input v-model="loginData.password">
+                            <Input v-model="loginData.loginPassword">
                                 <span slot="prepend">
                                     <Icon :size="14" type="locked"></Icon>
                                 </span>
@@ -58,7 +58,6 @@ export default {
             let _this=this
             this.$refs.loginForm.validate((valid) => {
                 if (valid) {
-                    console.log('111')
                     this.loginLoading=true
                     if(this.loginData.loginId=='admin'&&this.loginData.loginPassword=='admin'){
                         this.loginLoading=false
